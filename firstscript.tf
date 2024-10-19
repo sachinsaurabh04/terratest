@@ -1,8 +1,9 @@
 
-resource "aws_instance" "webserver" {
-  ami           = "ami-050cd642fd83388e4"
-  instance_type = "t2.micro"
+resource "aws_s3_bucket" "S3" {
+  bucket = "my-first-tf-created-bucket-843"
+
   tags = {
-    Name = "webserver"
+    Name        = "My bucket"
+    Environment = "Dev"
   }
 }
